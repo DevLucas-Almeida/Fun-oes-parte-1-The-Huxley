@@ -1,0 +1,54 @@
+def quad(l):
+    if l < 0:
+        return -1
+    else:
+        return (l * l)
+
+
+def ret(b, a):
+    if b < 0 or a < 0:
+        return -1
+    else:
+        return (b * a)
+
+
+def circ(r):
+    if r < 0:
+        return -1
+    else:
+        return 3.14 * (r ** 2)
+
+
+def saida(quads, rets, circs):
+    print(f"Maior circulo: %.2f" %max(circs))
+    print(f"Maior retangulo: %.2f" %max(rets))
+    print(f"Maior quadrado: %.2f"  %max(quads))
+    print(f"Quantidade de figuras %d" %(cont))
+    print(f"Percentual de circulos: %.2f" %((cont_circ / cont) * 100))
+
+
+quads = []
+rets = []
+circs = []
+cont_circ = 0
+cont = 0
+while True:
+    tipo = input()
+    if tipo == "sair":
+        saida(quads, rets, circs)
+        break
+    if tipo == "q":
+        cont += 1
+        lado = int(input())
+        quads.append(quad(lado))
+    elif tipo == "r":
+        cont +=1
+        base = int(input())
+        altura = int(input())
+        rets.append(ret(base, altura))
+    else:
+        cont_circ +=1
+        cont += 1
+        raio = int(input())
+        circs.append(circ(raio))
+
