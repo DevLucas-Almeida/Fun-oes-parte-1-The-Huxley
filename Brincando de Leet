@@ -1,0 +1,39 @@
+def leet(x):
+    cont = 0
+    sub = ""
+    numeros = "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+    for i in x:
+        if i in numeros:
+            print("numeros")
+            print("0")
+            exit()
+    if x == '':
+        print("Estamos com problemas na conexão com o servidor")
+    else:
+        for i in string[-1:0:-1]+string[0]:
+            if i == "A" or i == "a":
+                sub += "@"
+                cont += 1
+            elif i == "E" or i == "e":
+                sub += "3"
+                cont += 1
+            elif i == "I" or i == "i":
+                sub += "1"
+                cont += 1
+            elif i == "O" or i == "o":
+                sub += "0"
+                cont += 1
+            elif i == "T" or i == "t":
+                sub += "7"
+                cont += 1
+            elif i == "S" or i == "s":
+                sub += "5"
+                cont += 1
+            else:
+                sub += i
+        print(sub)
+        print(cont)
+
+
+string = input()
+leet(string)
