@@ -1,0 +1,46 @@
+def jogo(a, b):
+    m = r = 0
+    if a == "papel" and b == "pedra":
+        m += 1
+    elif a == "pedra" and b == "tesoura":
+        m += 1
+    elif a == "tesoura" and b == "papel":
+        m += 1
+    else:
+        if a == b:
+            m += 0
+        else:
+            r +=1
+    if m > r:
+        return "m"
+    elif m == r:
+        return ""
+    else:
+        return "r"
+
+
+def perdedor(m, mr):
+    mi = mr = 0
+    for x in range(5):
+        if jogo(miquel[x], maria[x]) == "m":
+            mi += 1
+        elif jogo(miquel[x], maria[x]) == "":
+            mi += 0
+        else:
+            mr += 1
+    if mi > mr:
+        print("MARIA")
+    else:
+        if mi == mr:
+            print("EMPATE")
+        else:
+            print("MIGUEL")
+
+
+miquel = []
+maria = []
+for x in range(5):
+    miquel.append(input())
+    maria.append(input())
+perdedor(miquel, maria)
+
