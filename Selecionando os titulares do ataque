@@ -1,0 +1,25 @@
+def indices(d, g, c, e):
+    indices = 0
+    if c == 0 and e == 0 or d == 0 and g == 0:
+        indices += 0
+    else:
+        indices += (d * 2) + (g * 3.5) + (c * 1.5) + (e * 2)
+    return indices
+
+
+def selecione(l):
+    for x in range(3):
+        if max(l):
+            print(max(l))
+            lista.remove(max(l))
+
+
+lista = []
+for x in range(5):
+    nome = input()
+    desempenho = int(input())
+    quant_gols = int(input())
+    n_cansaco = int(input())
+    n_entrosamento = int(input())
+    lista.append(indices(desempenho, quant_gols, n_cansaco, n_entrosamento))
+selecione(lista)
